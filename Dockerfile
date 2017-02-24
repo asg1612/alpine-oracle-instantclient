@@ -2,7 +2,7 @@ FROM frolvlad/alpine-glibc
 
 RUN apk update && apk add libaio
 
-COPY instantclient_12_1.zip
+COPY instantclient_12_1.zip ./
 RUN unzip instantclient_12_1.zip && \
     mv instantclient_12_1/ /usr/lib/ && \
     rm instantclient_12_1.zip && \
